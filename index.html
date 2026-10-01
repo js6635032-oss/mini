@@ -18,7 +18,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+
+            /* Permite deslizar en celular */
+            overflow-x: hidden;
+            overflow-y: auto;
 
             background: linear-gradient(
                 135deg,
@@ -36,14 +39,18 @@
             text-align: center;
             z-index: 10;
             padding: 20px;
+            max-width: 900px;
+            width: 100%;
         }
 
+        /* CORAZÓN PRINCIPAL */
         .corazon {
             font-size: 180px;
             animation: latido 1.2s infinite;
             filter: drop-shadow(0 0 30px #ff0000);
         }
 
+        /* TÍTULO */
         h1 {
             font-size: 50px;
             margin-top: 20px;
@@ -51,12 +58,16 @@
             text-shadow: 0 0 20px #ff0000;
         }
 
+        /* TEXTO */
         p {
             font-size: 24px;
+            line-height: 1.6;
             margin-top: 15px;
             animation: aparecer 3s ease-in-out;
+            white-space: pre-line;
         }
 
+        /* ANIMACIÓN DEL CORAZÓN */
         @keyframes latido {
             0% {
                 transform: scale(1);
@@ -79,6 +90,7 @@
             }
         }
 
+        /* ANIMACIÓN DEL TEXTO */
         @keyframes aparecer {
             from {
                 opacity: 0;
@@ -91,11 +103,13 @@
             }
         }
 
+        /* CORAZONES FLOTANTES */
         .corazon-flotante {
             position: absolute;
             bottom: -50px;
             font-size: 30px;
             animation: flotar linear infinite;
+            z-index: 1;
         }
 
         @keyframes flotar {
@@ -114,11 +128,29 @@
             }
         }
 
-        .h1 {
-            font-size: 50px;
+        /* FOTO */
+        .foto-final {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+            padding-bottom: 40px;
         }
 
+        .foto-final img {
+            width: 280px;
+            max-width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255, 0, 50, 0.7);
+            animation: aparecer 4s ease-in-out;
+        }
+
+        /* CELULARES */
         @media (max-width: 600px) {
+
+            .contenedor {
+                padding: 15px;
+            }
+
             .corazon {
                 font-size: 130px;
             }
@@ -129,6 +161,12 @@
 
             p {
                 font-size: 20px;
+                line-height: 1.5;
+            }
+
+            .foto-final img {
+                width: 280px;
+                max-width: 90%;
             }
         }
     </style>
@@ -136,27 +174,61 @@
 
 <body>
 
-    <!-- Corazones flotando -->
-    <div class="corazon-flotante" style="left: 10%; animation-duration: 7s;">❤️</div>
-    <div class="corazon-flotante" style="left: 25%; animation-duration: 9s;">❤️</div>
-    <div class="corazon-flotante" style="left: 40%; animation-duration: 6s;">❤️</div>
-    <div class="corazon-flotante" style="left: 55%; animation-duration: 8s;">❤️</div>
-    <div class="corazon-flotante" style="left: 70%; animation-duration: 10s;">❤️</div>
-    <div class="corazon-flotante" style="left: 85%; animation-duration: 7s;">❤️</div>
+    <!-- CORAZONES FLOTANDO -->
 
-    <!-- Mensaje principal -->
+    <div class="corazon-flotante"
+         style="left: 10%; animation-duration: 7s;">
+        ❤️
+    </div>
+
+    <div class="corazon-flotante"
+         style="left: 25%; animation-duration: 9s;">
+        ❤️
+    </div>
+
+    <div class="corazon-flotante"
+         style="left: 40%; animation-duration: 6s;">
+        ❤️
+    </div>
+
+    <div class="corazon-flotante"
+         style="left: 55%; animation-duration: 8s;">
+        ❤️
+    </div>
+
+    <div class="corazon-flotante"
+         style="left: 70%; animation-duration: 10s;">
+        ❤️
+    </div>
+
+    <div class="corazon-flotante"
+         style="left: 85%; animation-duration: 7s;">
+        ❤️
+    </div>
+
+
+    <!-- MENSAJE PRINCIPAL -->
+
     <div class="contenedor">
+
+        <!-- CORAZÓN GRANDE -->
 
         <div class="corazon">
             ❤️
         </div>
 
+
+        <!-- TÍTULO -->
+
         <h1>
             TE AMO, MI AMOR
         </h1>
 
+
+        <!-- MENSAJE -->
+
         <p>
-            Quiero que sepas que eres una persona muy especial para mí. ❤️ Cada momento contigo se convierte en un recuerdo que guardo con mucho cariño. Gracias por estar en mi vida, por hacerme sonreír y por darle un toque especial a mis días.
+Quiero que sepas que eres una persona muy especial para mí. ❤️ Cada momento contigo se convierte en un recuerdo que guardo con mucho cariño. Gracias por estar en mi vida, por hacerme sonreír y por darle un toque especial a mis días.
 
 Espero que cuando veas este pequeño detalle recuerdes cuánto te quiero y cuánto te amo, mi chiquita preciosa. ❤️ Apenas llevamos un mes de novios, pero siento que esto es para toda la vida. Te amo y siempre te amaré, a pesar de las dificultades y de todo lo que pueda pasar.
 
@@ -165,9 +237,14 @@ Mi REYNA, gracias por existir y por darle tanta felicidad a mi vida. Gracias por
 TE AMO CON TODO MI CORAZÓN. ❤️
 
 // ATT. Tu Novio ❤️
-
-            
         </p>
+
+
+        <!-- FOTO FINAL -->
+
+        <div class="foto-final">
+            <img src="foto.jpg" alt="Un recuerdo especial">
+        </div>
 
     </div>
 
