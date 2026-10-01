@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi amor ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            background: linear-gradient(
+                135deg,
+                #180000,
+                #5c0000,
+                #a00000,
+                #220000
+            );
+
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .contenedor {
+            text-align: center;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        .corazon {
+            font-size: 180px;
+            animation: latido 1.2s infinite;
+            filter: drop-shadow(0 0 30px #ff0000);
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            animation: aparecer 2s ease-in-out;
+            text-shadow: 0 0 20px #ff0000;
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 15px;
+            animation: aparecer 3s ease-in-out;
+        }
+
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.15);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .corazon-flotante {
+            position: absolute;
+            bottom: -50px;
+            font-size: 30px;
+            animation: flotar linear infinite;
+        }
+
+        @keyframes flotar {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .h1 {
+            font-size: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .corazon {
+                font-size: 130px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Corazones flotando -->
+    <div class="corazon-flotante" style="left: 10%; animation-duration: 7s;">❤️</div>
+    <div class="corazon-flotante" style="left: 25%; animation-duration: 9s;">❤️</div>
+    <div class="corazon-flotante" style="left: 40%; animation-duration: 6s;">❤️</div>
+    <div class="corazon-flotante" style="left: 55%; animation-duration: 8s;">❤️</div>
+    <div class="corazon-flotante" style="left: 70%; animation-duration: 10s;">❤️</div>
+    <div class="corazon-flotante" style="left: 85%; animation-duration: 7s;">❤️</div>
+
+    <!-- Mensaje principal -->
+    <div class="contenedor">
+
+        <div class="corazon">
+            ❤️
+        </div>
+
+        <h1>
+            TE AMO, MI AMOR
+        </h1>
+
+        <p>
+            ❤️ Eres una persona muy especial para mí ❤️
+        </p>
+
+    </div>
+
+</body>
+</html>
